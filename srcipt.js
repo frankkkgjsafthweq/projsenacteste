@@ -6,18 +6,17 @@ form.addEventListener("submit", e => {
 
   const data = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycbwqhmtYgv1Nb8fmduP8bh82uzqyGm7C5k2fT3U7hX2TyYDxoGGeRzFfRXlhMhUeRWcY/exec", { 
+  fetch("https://script.google.com/macros/s/AKfycbyYFDp94qlj1voSg0wu1wqMpFggvFeUbG-V46-CnPPFFhr8G6yntsnnl9Qulfv9vD6z/exec", {
     method: "POST",
     body: data
   })
-  .then(() => {
-    msg.textContent = "Cadastro enviado com sucesso!";
-    msg.style.color = "green";
+  .then(response => response.text())
+  .then(text => {
+    msg.innerText = "✅ Enviado com sucesso!";
     form.reset();
   })
-  .catch(() => {
-    msg.textContent = "Erro ao enviar. Tente novamente.";
-    msg.style.color = "red";
+  .catch(err => {
+    console.error("Erro ao enviar:", err);
+    msg.innerText = "❌ Ocorreu um erro, tente novamente.";
   });
 });
-    
