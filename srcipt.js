@@ -10,13 +10,15 @@ form.addEventListener("submit", e => {
     method: "POST",
     body: data
   })
-  .then(response => response.text())
-  .then(text => {
-    msg.innerText = "✅ Enviado com sucesso!";
+  .then(res => res.json())
+  .then(response => {
+    msg.innerText = "✅ " + response.mensagem;
+    msg.style.color = "green";
     form.reset();
   })
   .catch(err => {
     console.error("Erro ao enviar:", err);
     msg.innerText = "❌ Ocorreu um erro, tente novamente.";
+    msg.style.color = "red";
   });
 });
