@@ -1,42 +1,42 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9f9f9;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  width: 300px;
-  text-align: center;
+.conteiner {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
 }
 
 input, button {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 button {
-  background: #4285F4;
-  color: white;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
+    background: #4285F4;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
 button:hover {
-  background: #3367D6;
+    background: #3367D6;
 }
 
 #msg {
-  margin-top: 15px;
-  font-size: 14px;
+    margin-top: 15px;
+    font-size: 14px;
 }
